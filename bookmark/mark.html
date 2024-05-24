@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>book mark</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/mark.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+  </head>
+  <body>
+    <section id="top">
+      <div class="container text-center pt-5">
+        <h1 class="py-5 fs-1">Bookmarker</h1>
+        <div class="text-center py-5 w-75 m-auto book-mark">
+          <h3 class="mb-4">Bookmark your favorite sites</h3>
+          <div class="w-75 text-start m-auto">
+            <label for="SITENAME" class="form-label">site name</label>
+            <input type="text" id="SITENAME" class="form-control valdiation" />
+            <div class="alert alert-danger d-none p-1">
+              <small>plese enter 3 charaters and the first one is upper </small>
+            </div>
+          </div>
+          <div class="w-75 text-start m-auto my-4">
+            <label for="SITEURL" class="form-label">site URL</label>
+            <input
+              type="url"
+              id="SITEURL"
+              class="form-control valdiation"
+              aria-describedby="passwordHelpBlock"
+            />
+            <div class="alert alert-danger d-none p-1">
+              <small>plese enter valid url </small>
+            </div>
+          </div>
+          <button id="submit" class="btn btn-danger">submit</button>
+        </div>
+        <table class="table my-3">
+          <thead>
+            <tr>
+              <th scope="col">index</th>
+              <th scope="col">Website Name</th>
+              <th scope="col">LVisit</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody id="inner"></tbody>
+        </table>
+
+        <div id="box-rong" class="d-none">
+          <div id="rong" class="bg-white p-5 text-black">
+            <h2 class="fw-bold">
+              Site Name or Url is not valid, Please follow the rules below :
+            </h2>
+            <p class="fs-3">
+              Site Name or Url is not valid, Please follow the rules below :
+            </p>
+            <p class="fs-3">
+              Site URL must be a valid one and put in the first
+              <span class="bg-black text-white p-1"> https://</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/mark.js"></script>
+  </body>
+</html>
